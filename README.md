@@ -12,6 +12,8 @@ The goal of this project is not ultimate performance, but practicality: providin
 
 The driver is straightforward - just connect your slip-stick piezo stage and use 3-way lever-switch to jog the stage. The step amplitude is fixed at 28 V and the step frequency is fixed (in the firmware) at 300 Hz. This values are suitable, e.g. for Attocube ANP series.
 
+![The driver enclosed in a 3D case](docs/simplistic_piezostepper_driver.png)
+
 The circuit contains a PPTC resettable fuse which trips when we try to drive the short-circuit. It automatically resets upon switching the device off. 
 
 ## How it works
@@ -33,10 +35,16 @@ Exact values and footprints are given in the schematics/PCB files, but the desig
 - 6x half-bridge driver, e.g. IR2104STRPBF
 - 3x BNC connector, e.g. R-128
 - 3x lever switch, e.g. 1-1825139-8
-- 1x power switch, e.g. R13-220BA-01-BBG (mind that this is oversized)
+- 1x power switch, e.g. R13-220BA-01-BBG (oversized)
 - Raspberry Pico
-- some capacitors and resistors
-- DC supply socket
+- SMD 1206 elements: 7x diode, resistors: 1x 1MΩ, 6x 100kΩ, 12x 22Ω, 3x 10kΩ
+- THT capacitors
+- a polymer fuse, e.g. 0ZCJ0020FF2E
+- DC supply socket, e.g. PJ-063AH
+- step-up converter, e.g. MT3608 
+
+
+![Fully populated PCB](docs/simplistic_piezostepper_driver-pcb.jpg)
 
 
 
